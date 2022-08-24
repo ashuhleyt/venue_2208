@@ -18,4 +18,8 @@ class Venue
       patron.upcase 
     end
   end
+
+  def over_capacity?
+    @patrons.count >= 4
+  end
 end 
