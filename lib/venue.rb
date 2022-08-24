@@ -20,6 +20,12 @@ class Venue
   end
 
   def over_capacity?
-    @patrons.count >= 4
+    @patrons.count > 4
+  end
+
+  def kick_out
+    while patrons.length > capacity
+      patrons.pop
+    end
   end
 end 
